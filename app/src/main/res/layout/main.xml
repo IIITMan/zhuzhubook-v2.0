@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main">
+    <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/srlayout"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txt_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="无数据"
+            android:drawableTop="@mipmap/book"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"
+            android:padding="160dp"/>
+        <com.example.l.zhuzhubook.SwipeMenuListView.SwipeMenuListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.example.l.zhuzhubook.SwipeMenuListView.SwipeMenuListView>
+        <!--<ListView-->
+        <!--android:id="@+id/lview_books"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone" />-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:backgroundTint="#F66706"
+            app:srcCompat="@mipmap/jia" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>
